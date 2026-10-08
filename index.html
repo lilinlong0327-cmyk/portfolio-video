@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="求职作品展示视频，供招聘方查看。" />
+    <meta name="color-scheme" content="dark" />
+    <title>作品集视频</title>
+    <style>
+      :root {
+        font-family:
+          Inter, "PingFang SC", "Microsoft YaHei", system-ui, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #f7f7fb;
+        background: #090a10;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background:
+          radial-gradient(circle at 15% 15%, rgba(108, 92, 231, 0.22), transparent 34rem),
+          radial-gradient(circle at 85% 80%, rgba(0, 184, 148, 0.15), transparent 30rem),
+          #090a10;
+      }
+
+      main {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      header { margin-bottom: 24px; }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: #a9a9bd;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(32px, 6vw, 64px);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+
+      .intro {
+        max-width: 680px;
+        margin: 18px 0 0;
+        color: #c7c7d2;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .player {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 22px;
+        background: rgba(19, 20, 29, 0.78);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        max-height: 75vh;
+        background: #000;
+      }
+
+      .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 20px;
+      }
+
+      .hint {
+        margin: 0;
+        color: #aaaabb;
+        font-size: 14px;
+      }
+
+      .download {
+        flex: 0 0 auto;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        padding: 10px 16px;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 160ms ease, transform 160ms ease;
+      }
+
+      .download:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-1px);
+      }
+
+      @media (max-width: 640px) {
+        main {
+          width: min(100% - 20px, 1100px);
+          padding: 32px 0 48px;
+        }
+
+        .player { border-radius: 16px; }
+
+        .footer-row {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Portfolio Video</p>
+        <h1>作品集视频</h1>
+        <p class="intro">求职作品展示视频，供招聘方查看。点击播放按钮即可观看完整内容。</p>
+      </header>
+
+      <section class="player" aria-label="作品集视频播放器">
+        <video controls playsinline preload="metadata">
+          <source src="./freecompress-%E9%9B%A8.mp4" type="video/mp4" />
+          当前浏览器不支持视频播放，请使用下方按钮下载观看。
+        </video>
+        <div class="footer-row">
+          <p class="hint">建议在稳定网络环境下观看，支持全屏播放。</p>
+          <a class="download" href="./freecompress-%E9%9B%A8.mp4" download>下载视频</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
